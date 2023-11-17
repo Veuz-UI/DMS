@@ -1,0 +1,602 @@
+.flex {
+  display: flex;
+}
+.flex-d-c {
+  flex-direction: column;
+}
+.flex-g {
+  flex-grow: 1;
+}
+.flex-jc-s {
+  justify-content: flex-start;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-e {
+  justify-content: flex-end;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-a {
+  justify-content: space-around;
+}
+.flex-jc-evn {
+  justify-content: space-evenly;
+}
+.flex-ai-s {
+  align-items: start;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-ai-e {
+  align-items: end;
+}
+
+.py-32 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pt-32 {
+  padding-top: 2rem;
+}
+
+.pb-32 {
+  padding-bottom: 2rem;
+}
+
+.p-12 {
+  padding: 0.75rem;
+}
+
+.py-12 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.g-8 {
+  gap: 0.5rem;
+}
+
+.g-12 {
+  gap: 0.75rem;
+}
+
+.g-16 {
+  gap: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 1rem + 2vw, 2.875rem);
+}
+
+h2 {
+  font-size: clamp(1.375rem, 0.875rem + 1.5vw, 2rem);
+}
+
+h3 {
+  font-size: clamp(1.375rem, 0.75rem + 1.5vw, 1.375rem);
+}
+
+p {
+  margin-top: 0;
+}
+
+svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.editformbtn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.editformbtn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.editformbtn a svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+#DYNAMICFORMVIEW {
+  margin-top: 25px;
+}
+#DYNAMICFORMVIEW .form {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(59, 59, 59, 0.145);
+  margin: 10px auto;
+  width: 37.5rem;
+  min-height: 25rem;
+  padding: 1rem;
+  border: 0.25rem;
+  max-height: 70vh;
+    overflow-y: auto;
+}
+#DYNAMICFORMVIEW .form .title {
+  font-size: 1.675rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+#DYNAMICFORMVIEW .form .formbuilder {
+  border: 1px solid #cdc9c9;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+#DYNAMICFORMVIEW .form .formbuilder .ticketnumber {
+  background-color: #fff;
+  padding: 0.75rem;
+  border-bottom: 1px solid #cdc9c9;
+  color: #000;
+  font-size: 1rem;
+}
+#DYNAMICFORMVIEW .form .formbuilder .formdroppable {
+  padding: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.125rem;
+  min-height: 6.25rem;
+}
+#DYNAMICFORMVIEW .form .formbuilder .formdroppable .form-control {
+  padding: 0.75rem;
+  position: relative;
+  border: none;
+}
+#DYNAMICFORMVIEW .form .formbuilder .formdroppable .form-control.widthfull {
+  grid-column: 1/3;
+}
+
+main.builder {
+  height: calc(100vh - 80px) !important;
+}
+main.builder
+  #DYNAMICFORMVIEW
+  .form
+  .formbuilder
+  .formdroppable
+  .form-control:hover
+  .delete-element {
+  display: block;
+}
+#DYNAMICFORMVIEW .form .formbuilder .formdroppable .form-control label {
+  font-size: 0.875rem;
+  color: #000;
+  font-weight: 100;
+}
+#DYNAMICFORMVIEW .form .formbuilder .formdroppable .form-control small.required {
+  color: red;
+}
+#DYNAMICFORMVIEW .form .formbuilder .formdroppable .form-control input {
+  width: 100%;
+  padding: 0.3625rem 0.75rem;
+  border-radius: 0.125rem;
+  border: 1px solid #b7b7b7;
+  outline: none;
+  display: block;
+}
+#DYNAMICFORMVIEW .form .formbuilder .formdroppable .form-control textarea {
+  width: 100%;
+  padding: 0.3625rem 0.75rem;
+  border-radius: 0.125rem;
+  border: 1px solid #b7b7b7;
+  outline: none;
+  display: block;
+  resize: vertical;
+}
+#DYNAMICFORMVIEW .form .formbuilder .formdroppable .form-control select {
+  width: 100%;
+  padding: 0.3625rem 0.75rem;
+  border-radius: 0.125rem;
+  border: 1px solid #b7b7b7;
+  outline: none;
+  display: block;
+  resize: none;
+}
+#DYNAMICFORMVIEW .form .formbuilder .formdroppable .form-control .delete-element {
+  position: absolute;
+  display: none;
+  right: 0.75rem;
+  top: 0.75rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+#DYNAMICFORMVIEW .form .formbuilder .formdroppable .form-control .delete-element svg {
+  stroke: red;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* form builder page design   */
+
+main.builder {
+  width: 100%;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  gap: 1rem;
+  align-items: start;
+  overflow: hidden;
+}
+main.builder .toolbar {
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 0 10px #6464642b;
+}
+main.builder .toolbar .head {
+  background-color: #e8ecf0;
+  text-align: left;
+  padding: 0.75rem;
+}
+main.builder .toolbar .head span {
+  font-size: 1.023rem;
+  font-weight: bold;
+  color: #000;
+  display: block;
+}
+main.builder .toolbar .head small {
+  color: #000;
+}
+main.builder .toolbar .subtitle {
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 200;
+}
+main.builder .toolbar ul.form-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 0 1rem;
+}
+main.builder .toolbar ul.form-fields li {
+  position: relative;
+  outline: 1px solid #b7b7b7;
+  background-color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: all-scroll;
+  transition: all 300ms ease-in-out;
+}
+main.builder .toolbar ul.form-fields li:hover {
+  background-color: rgb(10, 171, 120);
+  color: #fff;
+}
+main.builder .toolbar ul.form-fields li:hover svg,
+main.builder .toolbar ul.form-fields li:hover small {
+  color: #fff;
+  stroke: #fff;
+}
+main.builder .toolbar ul.form-fields li svg,
+main.builder .toolbar ul.form-fields li small {
+  color: gray;
+  stroke: gray;
+}
+main.builder .toolbar ul.form-fields li span {
+  pointer-events: none;
+}
+main.builder .toolbar .form-save-btn {
+  position: absolute;
+  width: 100%;
+  bottom: 0.75rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.builder .toolbar .form-save-btn button {
+  padding: 12px 32px;
+  background-color: #2f5beb;
+  color: #fff;
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+  outline: transparent;
+  display: block;
+  font-size: 0.89rem;
+}
+main.builder #DYNAMICFORMBUILDER {
+  height: 100%;
+  overflow-y: scroll;
+}
+main.builder #DYNAMICFORMBUILDER .form {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(59, 59, 59, 0.0588235294);
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 37.5rem;
+  min-height: 25rem;
+  padding: 1rem;
+  border: 0.25rem;
+  min-height: 11.25rem;
+}
+main.builder #DYNAMICFORMBUILDER .form .title {
+  font-size: 1.375rem;
+  margin-bottom: 0.5rem;
+}
+main.builder #DYNAMICFORMBUILDER .form .formbuilder {
+  border: 1px solid #cdc9c9;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+main.builder #DYNAMICFORMBUILDER .form .formbuilder .ticketnumber {
+  background-color: #fff;
+  padding: 0.75rem;
+  border-bottom: 1px solid #cdc9c9;
+}
+main.builder #DYNAMICFORMBUILDER .form .formbuilder .formdroppable {
+  padding: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.0625rem;
+  min-height: 6.25rem;
+}
+main.builder #DYNAMICFORMBUILDER .form .formbuilder .formdroppable .form-control {
+  padding: 0.75rem;
+  cursor: all-scroll;
+  position: relative;
+  border: none;
+}
+main.builder #DYNAMICFORMBUILDER .form .formbuilder .formdroppable .form-control.widthfull {
+  grid-column: 1/3;
+}
+main.builder #DYNAMICFORMBUILDER .form .formbuilder .formdroppable .form-control:hover {
+  outline: 1px solid #b7b7b7;
+  background-color: rgba(240, 254, 253, 0.6196078431);
+}
+main.builder
+  #DYNAMICFORMBUILDER
+  .form
+  .formbuilder
+  .formdroppable
+  .form-control:hover
+  .delete-element {
+  display: block;
+}
+main.builder #DYNAMICFORMBUILDER .form .formbuilder .formdroppable .form-control label {
+  font-size: 0.875rem;
+  color: #000;
+  font-weight: 100;
+  user-select: none;
+  pointer-events: none;
+}
+main.builder #DYNAMICFORMBUILDER .form .formbuilder .formdroppable .form-control small.required {
+  color: red;
+}
+main.builder #DYNAMICFORMBUILDER .form .formbuilder .formdroppable .form-control input {
+  width: 100%;
+  padding: 0.3625rem 0.75rem;
+  border-radius: 0.125rem;
+  border: 1px solid #b7b7b7;
+  outline: none;
+  display: block;
+}
+main.builder #DYNAMICFORMBUILDER .form .formbuilder .formdroppable .form-control textarea {
+  width: 100%;
+  padding: 0.3625rem 0.75rem;
+  border-radius: 0.125rem;
+  border: 1px solid #b7b7b7;
+  outline: none;
+  display: block;
+  resize: none;
+}
+main.builder #DYNAMICFORMBUILDER .form .formbuilder .formdroppable .form-control select {
+  width: 100%;
+  padding: 0.3625rem 0.75rem;
+  border-radius: 0.125rem;
+  border: 1px solid #b7b7b7;
+  outline: none;
+  display: block;
+  resize: none;
+}
+main.builder #DYNAMICFORMBUILDER .form .formbuilder .formdroppable .form-control .delete-element {
+  position: absolute;
+  display: none;
+  right: 0.75rem;
+  top: 0.75rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+main.builder
+  #DYNAMICFORMBUILDER
+  .form
+  .formbuilder
+  .formdroppable
+  .form-control
+  .delete-element
+  svg {
+  stroke: red;
+  user-select: none;
+  pointer-events: none;
+}
+main.builder #properties {
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 0 10px #6464642b;
+}
+main.builder #properties .head {
+  background-color: #e8ecf0;
+  text-align: left;
+  padding: 0.85rem;
+}
+main.builder #properties .head span {
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+}
+main.builder #properties #properties-pannel {
+  margin-top: 0.75rem;
+  background-color: #fff;
+  padding: 1rem;
+  height: 100%;
+  overflow-y: scroll;
+}
+main.builder #properties #properties-pannel .help-text {
+  font-weight: 300;
+  font-size: 1rem;
+}
+main.builder
+  #properties
+  #properties-pannel
+  .properties
+  #FORMPROPERTY
+  .form-control:not(:last-child) {
+  margin-bottom: 1rem;
+}
+main.builder #properties #properties-pannel .properties #FORMPROPERTY .form-control {
+  border: none;
+  padding: 0;
+}
+main.builder #properties #properties-pannel .properties #FORMPROPERTY .form-control label {
+  display: block;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+main.builder #properties #properties-pannel .properties #FORMPROPERTY .form-control input {
+  width: 100%;
+  padding: 0.3625rem 0.75rem;
+  outline: transparent;
+  border: 1px solid #b7b7b7;
+  border-radius: 0.25rem;
+}
+main.builder
+  #properties
+  #properties-pannel
+  .properties
+  #FORMPROPERTY
+  .form-control
+  input::-webkit-outer-spin-button,
+main.builder
+  #properties
+  #properties-pannel
+  .properties
+  #FORMPROPERTY
+  .form-control
+  input::-webkit-inner-spin-button {
+  display: none;
+}
+main.builder
+  #properties
+  #properties-pannel
+  .properties
+  #FORMPROPERTY
+  .form-control
+  input[type='checkbox'] {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+main.builder #properties #properties-pannel .properties #FORMPROPERTY .form-control button {
+  padding: 12px 32px;
+  background-color: #2f5beb;
+  color: #fff;
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+  outline: transparent;
+  display: block;
+  font-size: 0.89rem;
+}
+
+main.form #form-template {
+  height: 100%;
+}
+main.form #form-template #form {
+  width: 37.5rem;
+  min-height: 12.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(59, 59, 59, 0.0588235294);
+  padding-bottom: 1.375rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+}
+main.form #form-template #form .title {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-bottom: 1px solid #b7b7b7;
+}
+main.form #form-template #form .title span {
+  pointer-events: none;
+  font-size: 1.375rem;
+  font-weight: 400;
+}
+main.form #form-template #form #elements .form-control {
+  position: relative;
+  padding: 12px 22px;
+  font-size: 22px;
+  display: block;
+}
+main.form #form-template #form #elements .form-control .label {
+  font-size: 0.875rem;
+  font-weight: 300;
+  display: block;
+  cursor: pointer;
+  margin: 0.25rem 0;
+}
+main.form #form-template #form #elements .form-control .required {
+  pointer-events: none;
+  color: red;
+  display: none;
+}
+main.form #form-template #form #elements .form-control .required.active {
+  display: block;
+}
+main.form #form-template #form #elements .form-control input,
+main.form #form-template #form #elements .form-control textarea {
+  outline: transparent;
+  width: 100%;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+  border: 1px solid #b7b7b7;
+}
+main.form #form-template #form #elements .form-control input[type='number'] {
+  appearance: none;
+}
+main.form #form-template #form .form-submit {
+  padding-top: 1.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
